@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Clients IP</title>
+    <style>
+        p {
+            color: green;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+
+    <script>
+        jQuery.get("http://ipinfo.io", function (response) {
+                   for (var i in response) {
+                         document.write(i+" == <b>"+response[i]+'</b><br>');
+                 }
+        }, "jsonp");
+    </script>
+</head>
+
+<body>
+    <center>
+        <p id="gfg"></p>
+
+    </center>
+</body>
+
+</html>
